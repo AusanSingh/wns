@@ -5,6 +5,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Login</h5>
                     <form class="form" [formGroup]="loginForm">
+                        <div class="alert alert-info">
+                          email: eve.holt@reqres.in <br>
+                          password: "cityslicka"
+                        </div>
                         <div class="alert alert-danger" *ngIf="userNotFound">{{userNotFound}}</div>
                         <div class="form-group">
                           <label for="uname1">Email</label>

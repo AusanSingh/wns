@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('auth_token', ResponseData.token);
           this.authService.token.next(ResponseData.token);
           this.authService.loggedIn.next(true);
-          this.router.navigateByUrl('dashboard');
+          this.router.navigateByUrl('chart1');
         },
         err => {
           this.userNotFound = err.error.error;

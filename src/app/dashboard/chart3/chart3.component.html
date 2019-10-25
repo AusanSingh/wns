@@ -1,1 +1,27 @@
 <p>chart3 works!</p>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="salaryRange" class="form-inline">
+            <label class="sr-only" for="inlineFormInputName2">Name</label>
+            <div class="mb-2 mr-sm-2">
+                Select Salary range
+            </div>
+            <select name="" class="form-control mb-2 mr-sm-2" formControlName="salaryRange">
+                <option value="">--Select--</option>
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+                <option value="50000">50000</option>
+                <option value="100000">100000</option>
+            </select>
+        
+        
+            <button type="submit" class="btn btn-primary mb-2" (click)="filter(salaryRange.value)" [disabled]="salaryRange.invalid" >Submit</button>
+        </form>
+        <div style="width: 100%; height: 400px;">
+            <canvas width="800" height="300" id="demo"></canvas>
+        </div>
+    </div>
+</div>

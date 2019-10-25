@@ -14,13 +14,16 @@ export class AuthService {
 
     }
 
-    get isLoggedIn() {
+    isLoggedIn() {
         return this.loggedIn.asObservable();
     }
     private tokenAvailable(): boolean {
         return !!localStorage.getItem('auth_token');
     }
-
+    
+    getRequest(url: any) {
+        return this.httpClient.get<any>(url);
+    }
     login(post: any) {
         return this.httpClient.post<any>(`https://reqres.in/api/login`, post);
     }

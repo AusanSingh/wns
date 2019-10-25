@@ -11,4 +11,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  signOut(){
+    localStorage.removeItem('auth_token');
+    location.reload();
+  }
 }
